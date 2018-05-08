@@ -14,7 +14,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/logo-nav.css" rel="stylesheet">
+    <link href="css/logo_nav.css" rel="stylesheet">
 
   </head>
 
@@ -51,8 +51,39 @@
     <br><br>  
     <div class="container">
       <h1 class="mt-5">Motor Control Project</h1>
-      <p></p>
-    <br><a class="nav-link" href="https://github.com/tarun0917/Motor-Control-Project" target="_blank"><center>Source Code</center></a><br>
+      <p>The main goal of this project is to create a simple user interface i.e a list of commands that gives us complete control of the motor. This project consists of two parts, the hardware and the software part. The major hardware components that was used for this project are a brushed DC motor, microcontroller, MAX9918 current-sense amplifier, DRV8835 H-bridge and a battery pack. The basic outline of the hardware connections are shown as below : <br><br> </p>
+     <figure>
+    <img src="images/project1/hardware.jpg" alt="" style="width:70%" class = "center">
+    <figcaption class = "centertext"><center>Hardware Connections</center></figcaption>
+    </figure>
+    <p align = "justify"><br>Once the harware was developed, it was time to develop the software. The motivation for developing this project is to build an intelligent motor driver where the user has the ability to control it by simply clicking a button. This algorithm provides the user with a simple user interface: a list of commands one can chose by pressing a key. Following are the list of commands available for the user : </p>
+         <img src="images/project1/usermenu.JPG" alt="" style="width:80%" class = "center">    <figcaption class = "centertext"><center>User Menu</center></figcaption>
+
+    <p align = "justify"><br>The overall flow of the algorithm is shown as below :</p>
+            <img src="images/project1/flowchart.JPG" alt="" style="width:90%" class = "center">
+        
+    <p align ="justify"><br> There are atwo control loops for this algorithm. The inner current control loop and the outer position control loop. First the gains was set for the inner current control loop using a preset wave (square waveform) and then the gains were set for the outer position control loop. <br><br>The type of trajectories that were developed for this project are a step trajectory and a cubic trajectory. The user first sets the control gains by using option 'i' and then loads the step or cubic trajectory using option 'm' or 'n'. Finally option 'o' is selected to execute the trajectory and a plot is obtained which shows the actual path and the path taken by the motor, the error can be calculated from the thsi plot. Below are the plots for the step and cubic trajectory :<br> </p>
+    <div class="row">
+  <div class="column">
+    <figure>
+    <img src="images/project1/steptrajectory.jpg" alt="" style="width:100%" class = "right">
+    <figcaption class = "centertext"><center>Step Trajectory</center></figcaption>
+    </figure>
+  </div>
+  <div class="column">
+     <figure>
+    <img src="images/project1/cubictrajectory.jpg" alt="" style="width:100%" class = "left">
+    <figcaption class = "lefttext"><center>Cubic Trajectory</center></figcaption>
+    </figure>
+  </div>
+</div>
+<p align="justify"><br>In the video below, I first load the step trajectory and use bad gain parameters and show the response. Then I use good gain parameters and show the response. I repeat the same procedure with the cubic trajectory.<br></p>
+     <video width="80%" controls class = "right">
+  <source src="videos/project1/motorcontrol.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+    <br><a class="nav-link" href="https://github.com/tarun0917/Motor-Control-Project" target="_blank"><center>Source Code</center>
+    </a><br>
     </div>
     <!-- /.container -->
     <footer class="py-5 bg-dark">
