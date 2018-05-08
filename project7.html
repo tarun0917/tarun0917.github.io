@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/logo_nav.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><h4>Tarun Subramanian</h4></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/tarun0917">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/tarunsubramanian">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+      
+    <br><br>  
+    <div class="container">
+      <h1 class="mt-5">.stl Algorithm</h1>
+    <br>        
+      <p align="justify">This algorithm is used to model a 3D spring using the equation of a helix to calculate the various points on the spring. Once the points are known, an triangulated surface is generated whihc is defined by a unit normal and vertices using a three dimensional Cartersian coordinate system. These triangles are respresented in a specific format (.stl) which can then be used for rapid prototying, 3D printing and computer-aided manufacturing. The flow of the algorithm is as follows : <br></p>
+   <figure>
+<img src="images/project7/flowchart.jpg" alt=""  class="center" width = 65% ><figcaption class = "centertext"><center></center></figcaption>
+    </figure>
+    <p><br>The equation of the helix in Cartesian coordinate system is given as :<br>
+        &emsp;&emsp;&emsp; x = [1 - r1 * cos(v)] * cos(u)<br>
+        &emsp;&emsp;&emsp; y = [1 - r1 * cos(v)] * sin(u)<br>
+        &emsp;&emsp;&emsp; z = r2 * [sin(v) + period_length * u / pi]<br>
+        Where,<br>
+        r1 = radius of the thickness of the coil<br>
+        r2 = radius of the coil<br>
+        u =  number of points the thickness of the coil is divided into <br>
+        v = number of points the radius of the coil is divided into
+        </p>
+        
+<br> 
+<div class="row">
+  <div class="column">
+    <figure>
+    <img src="images/project7/helixmatlab.JPG" alt="" style="width:80%" class = "right">
+    <figcaption class = "lefttext" style="margin-left:2%"><center>Helix in Matlab</center></figcaption>
+    </figure>
+  </div>
+  <div class="column">
+     <figure>
+    <img src="images/project7/helixsolidworks.JPG" alt="" style="width:80%" class = "left">
+    <figcaption class="righttext" style="margin-right:2%"><center>Helix in Solidworks</center></figcaption>
+    </figure>
+  </div>
+</div>
+
+      </div>
+      
+
+    <!-- /.container -->
+ <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+     </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
