@@ -74,8 +74,7 @@ We had initially made all the connections in a breakout board. This gives us eas
 The basic flow of the program is as follows. First, the GPIO of the Wi-Fi chips are configured and the root folder is set. Then the clock, camera, Wi-Fi chip and all the pins are initialized and then the program then enters the main loop, where the microcontroller checks for a Web Setup request, and if connected to the internet, waits for a web socket connection. It continues to wait until a connection is available. Once there is a connection, it takes the picture, calculates the length, creates a file on the Wi-Fi chips flash, then writes to the stream so that the website knows to update its image. The flowchart for the code is given below : </p>
                 <figure>
     <img src="images/project2/flowchart.JPG" alt="" style="width:70%" class = "center">
-    <figcaption class = "centertext"><center>Flowchart</center></figcaption>
-    </figure></p>
+</p><br>
          <p align = "justify">      
 The website was created using HTML and styled the page using CSS. To make the webpage interactive we used JavaScript. The entire design of the webpage was fairly simple with limited interactions such as clicking a button to start/stop the camera and navigating between pages. 
 <br><br>
