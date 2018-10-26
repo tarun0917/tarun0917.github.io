@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio - Tarun</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/logo_nav.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h4>Tarun Subramanian</h4></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+          <a class="nav-link" href="index.html">Projects</a>
+            </li>
+            <li class="nav-item">
+          <a class="nav-link" href="Tarun_Subramanian_Resume.pdf" target="_blank">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/tarun0917" target="_blank">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/tarunsubramanian" target="_blank">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+      
+    <br><br>  
+    <div class="container">
+      <h1 class="mt-5">Bayesian Search Theory Algorithm</h1>
+      <p align = "justify">Locating the wreckages of ships and aircrafts lost at sea is a tedious problem. The gamut of factors determining the probable location of wreckages is very large. The search for these wreckages is time and money intensive. The problem of this algorithm is to minimize this cost of search by arriving at location in minimum possible iterations using Bayesian Search Theorem
+        <br><br>
+        The Bayes formula for search states, 
+
+P(x│z)=(P(z│x)P(x))/(P(z))<br>
+Where,<br>
+&emsp;&emsp;&emsp;     x is the quantity of interest (e.g., the position of the aircraft),<br>
+&emsp;&emsp;&emsp;   	z is the measurement (e.g., Satellite communication data)<br>
+&emsp;&emsp;&emsp;   	P(x) is the prior probability distribution function (PDF) of the state <br>
+&emsp;&emsp;&emsp;   	P(z) is the probability that the measurement is true<br>  
+&emsp;&emsp;&emsp;   	P(z│x) is the PDF of the measurement based on a given state <br>
+&emsp;&emsp;&emsp;   	P(x│z) is the posterior PDF<br>
+<br>      
+First, the given area is divided into a number of small subareas and the probability of finding the lost item in a subarea is calculated using a number of factors such as last known altitude of the vehicle, speed, direction, the weather conditions etc. This is the prior distribution.
+<br><br>
+Second, the search is conducted at the subareas where the probabilities are the highest. The search methods may include radar/sonar, aerial surveillance, etc. The success rate of each search method accounts for the P(z│x) term in the Bayes formula. If the object is not found at these places, then the posterior distribution is updated. 
+<br><br>
+Third, the search is once again conducted at subareas with highest probabilities. The benefit of using Bayes formula is that it optimizes the search. Rather than finding the entire grid for the lost items, taking into account a number of known factors about the lost items, Bayes formula reduces the search area to a large extent thereby saving time of search, expenditure incurred while conducting the search.
+
+</p>
+        
+<div class="row">
+  <div class="column">
+    <figure>
+    <img src="images/bayesiansearch/priordistribution.jpg" alt="" style="width:80%" class = "right">
+    <figcaption class = "lefttext" style="margin-left:2%"><center>Prior Distribution</center></figcaption>
+    </figure>
+  </div>
+  <div class="column">
+     <figure>
+    <img src="images/bayesiansearch/posteriordistribution.jpg" alt="" style="width:80%" class = "left">
+    <figcaption class="righttext" style="margin-right:2%"><center>Posteriror Distribution</center></figcaption>
+    </figure>
+  </div>
+</div>
+<p align = "justify">The above diagram is a sample output of the code. It is a 10 x 10 grid where we are required to hide the target (for ex. ship) in the grid and the algorithm finds the target using Bayes formula. The first diagram gives us the prior distribution which is obtained using already existing information. The red areas are the region of maximum probabilty of finding the ship whereas the purple area are the regions of minimum probablity of finding the ship. The second diagram gives the posterior distribution which is the updated probablity which was obtained after finding out that the target was not found in the region of maximum probablity. The updated probablity distribution is then used in the next iteration to find the target. In the above sample output I placed the ship at X = 1 and Y = 3. The algorithm was able to find the location after 5 iterations. </p>
+<br><a class="nav-link" href="https://github.com/tarun0917/Bayesian-Search" target="_blank"><center>Source Code</center></a><br>
+    </div>
+    <!-- /.container -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Tarun Subramanian</p>
+        <p class="m-0 text-center text-white">MS in Mechanical Engineering</p>
+        <p class="m-0 text-center text-white">Northwestern University</p>
+      </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
